@@ -37,7 +37,7 @@
               <button type="button" class="btn btn-primary" data-nav="practice">開始一回練習 <span aria-hidden="true">→</span></button>
               <button type="button" class="btn btn-quiet-light" data-nav="library">匯入自己的題庫</button>
             </div>
-            <p class="hero-footnote">已整合 722 題歷屆教甄單選題與 18 題原創示範題；舊法規與政策題應依命題年度理解。</p>
+            <p class="hero-footnote">已整合 1,104 題歷屆教甄單選題與 18 題原創示範題；其中 722 題具有詳解，382 題待補充。</p>
           </div>
           <div class="hero-illustration" aria-hidden="true">
             <div class="sheet sheet-back"></div>
@@ -129,10 +129,11 @@
       </section>
 
       <section id="view-library" class="view" aria-labelledby="library-title" hidden>
-        <div class="page-intro"><span class="section-kicker">QUESTION LIBRARY</span><h1 id="library-title">題庫管理</h1><p>目前已收錄10冊逐題詳解中的722道單選題，以及18題原創示範題；可依年度、來源、知識領域練習，也可匯入自己的題庫。</p></div>
+        <div class="page-intro"><span class="section-kicker">QUESTION LIBRARY</span><h1 id="library-title">題庫管理</h1><p>目前整合16份不同考卷，共1,104道歷屆單選題（722題已附深度詳解、382題待補詳解），另有18題原創示範題；可依年度、來源及領域練習。</p></div>
         <div class="library-grid">
           <article class="panel panel-padding">
             <div class="panel-heading"><div><span class="section-kicker">IMPORT</span><h2>匯入個人題庫</h2></div><span class="file-format">.json</span></div>
+            <p class="body-copy">來源說明：原始17份HTML中有一份重複，現整合為16份不同考卷。複選題、刪題、缺圖或題組缺共用敘述的題目尚未納入一般單選練習。舊法規與政策題應另外核對現行規定。</p>
             <p class="body-copy">選擇 UTF-8 JSON 檔案。每題需包含題目、選項及正確答案；詳解欄位可逐步補齊。自行匯入的資料會保存在目前瀏覽器，不會上傳伺服器。</p>
             <label for="import-file" class="upload-box"><span class="upload-icon">＋</span><strong>選取 JSON 題庫檔案</strong><span>支援一次匯入多道題目；重複 ID 會自動略過</span><input type="file" id="import-file" accept=".json,application/json"></label>
             <p class="status-text" id="import-status" role="status"></p>
