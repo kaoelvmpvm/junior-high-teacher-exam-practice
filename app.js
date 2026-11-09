@@ -10,6 +10,7 @@
   const MAX_IMPORT = 3000;
   const MAX_FILE_BYTES = 4 * 1024 * 1024;
   let demoQuestions = [];
+  let bankQuestions = [];
   let customQuestions = [];
   let attempts = [];
   let wrongIds = [];
@@ -92,7 +93,7 @@
       return true;
     });
   }
-  function allQuestions() { return demoQuestions.concat(customQuestions); }
+  function allQuestions() { return bankQuestions.concat(demoQuestions, customQuestions); }
   function questionMap() {
     const map = new Map();
     allQuestions().forEach(function (q) { map.set(q.id, q); });
@@ -102,10 +103,14 @@
     const mode = $('filter-mode').value;
     const category = $('filter-category').value;
     const bank = $('filter-bank').value;
+    const year = $('filter-year').value;
+    const exam = $('filter-exam').value;
     const attempted = new Set(attempts.map(function (a) { return a.id; }));
     return allQuestions().filter(function (q) {
       if (category !== 'all' && q.category !== category) return false;
       if (bank !== 'all' && q.kind !== bank) return false;
+      if (year !== 'all' && q.year !== year) return false;
+      if (exam !== 'all' && q.exam !== exam) return false;
       if (mode === 'wrong' && !wrongIds.includes(q.id)) return false;
       if (mode === 'bookmark' && !bookmarkIds.includes(q.id)) return false;
       if (mode === 'unanswered' && attempted.has(q.id)) return false;
@@ -113,12 +118,20 @@
     });
   }
   function updateCategories() {
-    const select = $('filter-category');
-    const selected = select.value;
     const categories = Array.from(new Set(allQuestions().map(function (q) { return q.category; }))).sort(function (a, b) { return a.localeCompare(b, 'zh-Hant'); });
-    select.replaceChildren(new Option('全部領域', 'all'));
-    categories.forEach(function (category) { select.add(new Option(category, category)); });
-    select.value = categories.includes(selected) ? selected : 'all';
+    const yearValues = Array.from(new Set(allQuestions().map(function (q) { return q.year; }).filter(Boolean))).sort(function (a,b) { return Number(b)-Number(a); });
+    const examValues = Array.from(new Set(allQuestions().map(function (q) { return q.exam; }).filter(Boolean))).sort(function (a,b) { return a.localeCompare(b, 'zh-Hant'); });
+    const filters = [
+      {id:'filter-category', caption:'全部領域', values:categories},
+      {id:'filter-year', caption:'全部年度', values:yearValues},
+      {id:'filter-exam', caption:'全部來源', values:examValues}
+    ];
+    filters.forEach(function (filter) {
+      const control = $(filter.id), selected = control.value;
+      control.replaceChildren(new Option(filter.caption,'all'));
+      filter.values.forEach(function (value) { control.add(new Option(value,value)); });
+      control.value = filter.values.includes(selected) ? selected : 'all';
+    });
   }
   function updateAvailability() {
     const count = availableQuestions().length;
@@ -216,6 +229,7 @@
     updateAvailability();
   }
   function renderLibrary() {
+    $('library-bank-count').textContent = String(bankQuestions.length);
     $('library-demo-count').textContent = String(demoQuestions.length);
     $('library-custom-count').textContent = String(customQuestions.length);
     $('library-bookmark-count').textContent = String(bookmarkIds.length);
@@ -323,6 +337,7 @@
   function renderExplanation(q) {
     const target = $('explanation-body');
     target.replaceChildren();
+    if (q.kind === 'bank') addExplanationSection(target, '歷史試題提醒', '本題採用原題庫於民國 ' + (q.year || '未知') + ' 年的答案與解析，並非重新查核的官方現行法規。涉及法令、教育政策或制度時，請另行核對最新規定。');
     addExplanationSection(target, '核心概念', q.explanation || '本題尚未提供整體詳解，可先依正確答案核對；後續可透過題庫 JSON 補齊。');
     const optionBlock = textNode('section', 'explanation-section', '');
     optionBlock.append(textNode('h4', '', '選項逐項解析'));
@@ -476,6 +491,43 @@
       refreshUI();
     }
   }
+  async function loadBanks() {
+    try {
+      const response = await fetch('./data/banks/index.json', {cache:'no-store'});
+      if (!response.ok) throw new Error('題庫清單 HTTP ' + response.status);
+      const manifest = await response.json();
+      if (!manifest || !Array.isArray(manifest.files)) throw new Error('題庫清單格式錯誤');
+      const files = await Promise.allSettled(manifest.files.map(async function (info) {
+        const result = await fetch(info.file, {cache:'no-store'});
+        if (!result.ok) throw new Error(info.name + ' HTTP ' + result.status);
+        const payload = await result.json();
+        if (!Array.isArray(payload.questions)) throw new Error(info.name + ' 格式錯誤');
+        const items = normalizeAll(payload.questions, 'bank');
+        if (items.length !== info.count) throw new Error(info.name + ' 題數異常');
+        return items;
+      }));
+      const seen = new Set(demoQuestions.concat(customQuestions).map(function (q) { return q.id; }));
+      bankQuestions = [];
+      let failures = 0;
+      files.forEach(function (result) {
+        if (result.status !== 'fulfilled') { failures++; return; }
+        result.value.forEach(function (q) {
+          if (seen.has(q.id)) return;
+          seen.add(q.id);
+          bankQuestions.push(q);
+        });
+      });
+      if (failures || bankQuestions.length !== manifest.totalImportedQuestions) {
+        toast('歷屆題庫載入不完整：已讀取 ' + bankQuestions.length + ' / ' + manifest.totalImportedQuestions + ' 題，請重新整理確認。');
+      }
+    } catch (error) {
+      $('setup-status').textContent = '歷屆題庫讀取失敗：' + error.message + '；請確認 data/banks/index.json 與所有分冊檔案已發布。';
+      toast('歷屆題庫載入失敗，仍可使用示範題或自訂題庫。');
+    } finally {
+      dataLoaded = true;
+      refreshUI();
+    }
+  }
   function init() {
     customQuestions = normalizeAll(read(KEY.custom, []), 'custom');
     attempts = safeArray(read(KEY.attempts, [])).filter(function (a) { return a && typeof a.id === 'string' && typeof a.correct === 'boolean'; });
@@ -487,7 +539,7 @@
         showView(node.dataset.nav);
       });
     });
-    ['filter-mode', 'filter-category', 'filter-bank', 'filter-count'].forEach(function (id) {
+    ['filter-mode', 'filter-category', 'filter-bank', 'filter-year', 'filter-exam', 'filter-count'].forEach(function (id) {
       $(id).addEventListener('change', function () { $('setup-status').textContent = ''; updateAvailability(); });
     });
     $('setup-form').addEventListener('submit', function (event) { event.preventDefault(); startFromFilters(); });
@@ -499,6 +551,8 @@
       $('filter-mode').value = 'wrong';
       $('filter-category').value = 'all';
       $('filter-bank').value = 'all';
+      $('filter-year').value = 'all';
+      $('filter-exam').value = 'all';
       startFromFilters();
     });
     $('import-file').addEventListener('change', function (event) { importQuestions(event.target.files[0]); });
@@ -536,6 +590,7 @@
     const incoming = location.hash.slice(1);
     showView(['home', 'practice', 'wrong', 'library'].includes(incoming) ? incoming : 'home');
     loadDemo();
+    loadBanks();
   }
   init();
 })();
