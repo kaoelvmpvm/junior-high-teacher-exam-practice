@@ -401,6 +401,8 @@
     $('progress-percent').textContent = Math.round((session.index + 1) / session.questions.length * 100) + '%';
     $('progress-bar').style.width = ((session.index + 1) / session.questions.length * 100) + '%';
     refreshUI();
+    // Make the personal note visible immediately on phones and long questions.
+    if (!correct) $('explanation-panel').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
   function nextQuestion() {
     if (!session || session.selected === null) return;
