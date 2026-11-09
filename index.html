@@ -37,7 +37,7 @@
               <button type="button" class="btn btn-primary" data-nav="practice">開始一回練習 <span aria-hidden="true">→</span></button>
               <button type="button" class="btn btn-quiet-light" data-nav="library">匯入自己的題庫</button>
             </div>
-            <p class="hero-footnote">目前內建題目為原創示範題，並非歷屆教甄原題。</p>
+            <p class="hero-footnote">已整合 722 題歷屆教甄單選題與 18 題原創示範題；舊法規與政策題應依命題年度理解。</p>
           </div>
           <div class="hero-illustration" aria-hidden="true">
             <div class="sheet sheet-back"></div>
@@ -56,7 +56,7 @@
 
         <div class="section-heading home-section-heading"><div><span class="section-kicker">YOUR PROGRESS</span><h2>學習概況</h2></div><span class="subtle-label">紀錄僅儲存在目前的瀏覽器</span></div>
         <div class="stat-grid">
-          <article class="stat-card"><span class="stat-icon lavender">▦</span><span class="stat-title">可練習題數</span><strong id="stat-total">—</strong><span class="stat-hint">內建與個人匯入題庫</span></article>
+          <article class="stat-card"><span class="stat-icon lavender">▦</span><span class="stat-title">可練習題數</span><strong id="stat-total">—</strong><span class="stat-hint">歷屆題庫、示範題與個人題庫</span></article>
           <article class="stat-card"><span class="stat-icon mint">↗</span><span class="stat-title">累積作答次數</span><strong id="stat-attempts">—</strong><span class="stat-hint">同題重練會累計</span></article>
           <article class="stat-card"><span class="stat-icon peach">◎</span><span class="stat-title">歷次作答正確率</span><strong id="stat-accuracy">—</strong><span class="stat-hint">按所有作答紀錄計算</span></article>
           <article class="stat-card"><span class="stat-icon sky">↺</span><span class="stat-title">待複習錯題</span><strong id="stat-wrong">—</strong><span class="stat-hint">重新答對即可移出</span></article>
@@ -87,7 +87,9 @@
             <div class="form-grid">
               <label class="field"><span>練習模式</span><select id="filter-mode"><option value="all">綜合刷題</option><option value="wrong">錯題回練</option><option value="bookmark">收藏複習</option><option value="unanswered">尚未作答</option></select></label>
               <label class="field"><span>知識領域</span><select id="filter-category"><option value="all">全部領域</option></select></label>
-              <label class="field"><span>題庫來源</span><select id="filter-bank"><option value="all">全部題庫</option><option value="demo">內建示範題</option><option value="custom">我的匯入題庫</option></select></label>
+              <label class="field"><span>題庫類型</span><select id="filter-bank"><option value="all">全部題庫</option><option value="bank">歷屆教甄題庫</option><option value="demo">原創示範題</option><option value="custom">我的匯入題庫</option></select></label>
+              <label class="field"><span>考試年度</span><select id="filter-year"><option value="all">全部年度</option></select></label>
+              <label class="field"><span>原卷來源</span><select id="filter-exam"><option value="all">全部來源</option></select></label>
               <label class="field"><span>本回題數</span><select id="filter-count"><option value="5">5 題</option><option value="10" selected>10 題</option><option value="20">20 題</option><option value="all">全部符合題目</option></select></label>
             </div>
             <div class="setup-bottom"><div class="order-box"><span class="field-caption">出題順序</span><label><input type="radio" name="order" value="random" checked> 隨機出題</label><label><input type="radio" name="order" value="sequence"> 依題號排序</label></div><p id="available-count" class="available-count">正在讀取題目……</p></div>
@@ -127,18 +129,18 @@
       </section>
 
       <section id="view-library" class="view" aria-labelledby="library-title" hidden>
-        <div class="page-intro"><span class="section-kicker">QUESTION LIBRARY</span><h1 id="library-title">題庫管理</h1><p>目前先以示範題進行功能測試；日後可以把整理好的歷屆題庫轉成 JSON 匯入。</p></div>
+        <div class="page-intro"><span class="section-kicker">QUESTION LIBRARY</span><h1 id="library-title">題庫管理</h1><p>目前已收錄10冊逐題詳解中的722道單選題，以及18題原創示範題；可依年度、來源、知識領域練習，也可匯入自己的題庫。</p></div>
         <div class="library-grid">
           <article class="panel panel-padding">
             <div class="panel-heading"><div><span class="section-kicker">IMPORT</span><h2>匯入個人題庫</h2></div><span class="file-format">.json</span></div>
-            <p class="body-copy">選擇 UTF-8 JSON 檔案。每題需包含題目、選項及正確答案；詳解欄位可逐步補齊。資料會保存在目前瀏覽器，不會上傳伺服器。</p>
+            <p class="body-copy">選擇 UTF-8 JSON 檔案。每題需包含題目、選項及正確答案；詳解欄位可逐步補齊。自行匯入的資料會保存在目前瀏覽器，不會上傳伺服器。</p>
             <label for="import-file" class="upload-box"><span class="upload-icon">＋</span><strong>選取 JSON 題庫檔案</strong><span>支援一次匯入多道題目；重複 ID 會自動略過</span><input type="file" id="import-file" accept=".json,application/json"></label>
             <p class="status-text" id="import-status" role="status"></p>
             <button type="button" id="download-sample" class="inline-action">下載示範題庫格式 <span aria-hidden="true">↓</span></button>
           </article>
           <article class="panel panel-padding">
             <span class="section-kicker">LOCAL STORAGE</span><h2>本機資料</h2>
-            <div class="data-summary"><div><span>內建示範題</span><strong id="library-demo-count">—</strong></div><div><span>自行匯入題目</span><strong id="library-custom-count">—</strong></div><div><span>已收藏題目</span><strong id="library-bookmark-count">—</strong></div></div>
+            <div class="data-summary"><div><span>歷屆教甄題庫</span><strong id="library-bank-count">—</strong></div><div><span>內建示範題</span><strong id="library-demo-count">—</strong></div><div><span>自行匯入題目</span><strong id="library-custom-count">—</strong></div><div><span>已收藏題目</span><strong id="library-bookmark-count">—</strong></div></div>
             <div class="data-actions">
               <button type="button" class="btn btn-secondary" id="export-progress">匯出學習紀錄</button>
               <button type="button" class="btn btn-secondary" id="import-progress-btn">匯入學習紀錄</button><input type="file" id="import-progress-file" accept=".json,application/json" hidden>
