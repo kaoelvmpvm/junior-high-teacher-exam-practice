@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#14283d">
-  <meta name="description" content="國中教師甄試教育專業科刷題系統：練習、逐項詳解、錯題複習與個人學習紀錄。">
+  <meta name="description" content="國中教師甄試刷題系統：練習、個人錯題筆記、重錯提醒與學習紀錄。">
   <title>國中教甄｜知識刷題室</title>
   <link rel="stylesheet" href="./styles.css">
   <script defer src="./app.js"></script>
@@ -32,12 +32,12 @@
           <div class="hero-content">
             <span class="eyebrow"><span class="eyebrow-dot"></span> 教甄備考練習平台</span>
             <h1 id="home-title">把每一道題目，<br><em>變成會留下的知識。</em></h1>
-            <p>不只核對答案。透過考點解析、選項辨析與錯題回練，逐步建立自己的教育專業知識地圖。</p>
+            <p>不只核對答案。答錯時寫下自己的理解與易混淆處，下次再錯，系統會主動提醒你曾經寫下的筆記。</p>
             <div class="hero-actions">
               <button type="button" class="btn btn-primary" data-nav="practice">開始一回練習 <span aria-hidden="true">→</span></button>
               <button type="button" class="btn btn-quiet-light" data-nav="library">匯入自己的題庫</button>
             </div>
-            <p class="hero-footnote">已整合 1,104 題歷屆教甄單選題與 18 題原創示範題；其中 722 題具有詳解，382 題待補充。</p>
+            <p class="hero-footnote">已整合 1,104 題歷屆教甄單選題與 18 題原創示範題；其中 722 題保留既有解析資料；刷題介面改採個人錯題筆記。</p>
           </div>
           <div class="hero-illustration" aria-hidden="true">
             <div class="sheet sheet-back"></div>
@@ -71,8 +71,8 @@
             <span class="section-kicker">HOW IT WORKS</span><h3>你的三步複習法</h3>
             <ol class="steps">
               <li><span>01</span><div><strong>選擇主題，開始作答</strong><p>依知識領域、題庫來源及練習模式篩選。</p></div></li>
-              <li><span>02</span><div><strong>逐項釐清選項</strong><p>答後閱讀破題重點、選項解釋與易混淆觀念。</p></div></li>
-              <li><span>03</span><div><strong>回練錯題，修正盲點</strong><p>錯題自動收錄，再次答對即可移出錯題本。</p></div></li>
+              <li><span>02</span><div><strong>寫下自己的錯題筆記</strong><p>答錯後記錄錯因、解題線索與易混淆觀念。</p></div></li>
+              <li><span>03</span><div><strong>下次答錯，自動提醒筆記</strong><p>同題再錯時跳出以前的筆記；答對仍可移出錯題本。</p></div></li>
             </ol>
             <button type="button" class="inline-action" data-nav="practice">進入練習設定 <span aria-hidden="true">↗</span></button>
           </article>
@@ -80,7 +80,7 @@
       </section>
 
       <section id="view-practice" class="view" aria-labelledby="practice-title" hidden>
-        <div class="page-intro"><span class="section-kicker">PRACTICE ROOM</span><h1 id="practice-title">開始一回練習</h1><p>依自己的複習需求組卷，答題後立即查看完整解析。</p></div>
+        <div class="page-intro"><span class="section-kicker">PRACTICE ROOM</span><h1 id="practice-title">開始一回練習</h1><p>作答後核對正確選項；答錯時可建立筆記，再錯就提醒。</p></div>
         <div id="setup-screen" class="panel setup-panel">
           <form id="setup-form">
             <div class="setup-heading"><div class="setting-number">01</div><div><h2>設定練習範圍</h2><p>每次作答前都可以調整，題數不會超過實際符合條件的題目。</p></div></div>
@@ -106,11 +106,19 @@
             <div id="question-options" class="question-options" aria-label="答案選項"></div>
             <div id="answer-feedback" class="answer-feedback" role="status" hidden></div>
           </article>
-          <article id="explanation-panel" class="panel explanation-panel" hidden>
-            <div class="explanation-heading"><span class="section-kicker">ANSWER REVIEW</span><h3>逐題詳解</h3></div>
-            <div id="explanation-body"></div>
+          <article id="explanation-panel" class="panel explanation-panel note-panel" aria-labelledby="note-panel-title" hidden>
+            <div class="explanation-heading"><span class="section-kicker">PERSONAL REVIEW NOTE</span><h3 id="note-panel-title">我的錯題筆記</h3></div>
+            <div id="saved-note-reminder" class="saved-note-reminder" role="status" hidden>
+              <strong><span aria-hidden="true">↺</span> 這題曾經錯過！上次寫的筆記</strong>
+              <p id="saved-note-text"></p>
+            </div>
+            <p id="note-intro" class="note-intro">這是你第一次記錄這題。想想為什麼選錯、正確判斷的線索是什麼。</p>
+            <label class="note-label" for="note-editor">我的理解與容易搞混的地方</label>
+            <textarea id="note-editor" class="note-editor" rows="5" maxlength="3000" placeholder="例如：我誤以為負增強是懲罰；其實只要行為增加就是增強，『負』是移除刺激。"></textarea>
+            <div class="note-meta"><span id="note-status" role="status" aria-live="polite">輸入內容會自動儲存到此瀏覽器。</span><span id="note-length">0 / 3000</span></div>
+            <p class="note-tip">筆記由你自己撰寫，答對時不會自動顯示；即使答對並移出錯題本，筆記仍會保留。</p>
           </article>
-          <div class="quiz-actions"><span class="small-muted">可使用鍵盤 1–6 選答案，Enter 進入下一題</span><button type="button" id="next-btn" class="btn btn-primary" disabled>下一題 <span aria-hidden="true">→</span></button></div>
+          <div class="quiz-actions"><span class="small-muted">可使用鍵盤 1–6 選答案；筆記會自動儲存</span><button type="button" id="next-btn" class="btn btn-primary" disabled>下一題 <span aria-hidden="true">→</span></button></div>
         </div>
 
         <div id="summary-stage" class="panel summary-panel" hidden>
@@ -123,7 +131,7 @@
       </section>
 
       <section id="view-wrong" class="view" aria-labelledby="wrong-title" hidden>
-        <div class="page-intro"><span class="section-kicker">REVIEW NOTEBOOK</span><h1 id="wrong-title">我的錯題本</h1><p>錯題會自動收錄。再次練習並答對後，系統會將該題移出待複習清單。</p></div>
+        <div class="page-intro"><span class="section-kicker">REVIEW NOTEBOOK</span><h1 id="wrong-title">我的錯題本</h1><p>錯題自動收錄；可在這裡查看或修改個人筆記。答對後移出錯題本，但已寫的筆記仍會保留。</p></div>
         <div class="list-toolbar"><span id="wrong-summary" class="small-muted">讀取中……</span><button class="btn btn-primary" id="practice-wrong-btn" type="button">開始錯題回練 <span aria-hidden="true">→</span></button></div>
         <div id="wrong-list" class="item-list"></div>
       </section>
@@ -141,14 +149,14 @@
           </article>
           <article class="panel panel-padding">
             <span class="section-kicker">LOCAL STORAGE</span><h2>本機資料</h2>
-            <div class="data-summary"><div><span>歷屆教甄題庫</span><strong id="library-bank-count">—</strong></div><div><span>內建示範題</span><strong id="library-demo-count">—</strong></div><div><span>自行匯入題目</span><strong id="library-custom-count">—</strong></div><div><span>已收藏題目</span><strong id="library-bookmark-count">—</strong></div></div>
+            <div class="data-summary"><div><span>已寫個人筆記</span><strong id="library-notes-count">—</strong></div><div><span>歷屆教甄題庫</span><strong id="library-bank-count">—</strong></div><div><span>內建示範題</span><strong id="library-demo-count">—</strong></div><div><span>自行匯入題目</span><strong id="library-custom-count">—</strong></div><div><span>已收藏題目</span><strong id="library-bookmark-count">—</strong></div></div>
             <div class="data-actions">
-              <button type="button" class="btn btn-secondary" id="export-progress">匯出學習紀錄</button>
-              <button type="button" class="btn btn-secondary" id="import-progress-btn">匯入學習紀錄</button><input type="file" id="import-progress-file" accept=".json,application/json" hidden>
+              <button type="button" class="btn btn-secondary" id="export-progress">匯出學習紀錄與筆記</button>
+              <button type="button" class="btn btn-secondary" id="import-progress-btn">匯入學習紀錄與筆記</button><input type="file" id="import-progress-file" accept=".json,application/json" hidden>
               <button type="button" class="btn btn-secondary" id="export-custom">匯出個人題庫</button>
-              <button type="button" class="btn btn-danger-quiet" id="reset-progress">清除學習紀錄</button>
+              <button type="button" class="btn btn-danger-quiet" id="reset-progress">清除作答紀錄（保留筆記）</button>
             </div>
-            <p class="helper-note">更換瀏覽器、清除網站資料或使用無痕模式，可能遺失紀錄。建議定期匯出備份。</p>
+            <p class="helper-note">錯題筆記依題號儲存在本機，答對不刪除。更換瀏覽器、清除網站資料或使用無痕模式可能遺失筆記，建議定期匯出備份。</p>
           </article>
         </div>
         <article class="panel panel-padding schema-panel"><div class="panel-heading"><div><span class="section-kicker">DATA SPECIFICATION</span><h2>題庫資料格式</h2></div><span class="small-muted">正確答案採從 0 開始的選項索引，亦可使用 A、B、C、D</span></div>
