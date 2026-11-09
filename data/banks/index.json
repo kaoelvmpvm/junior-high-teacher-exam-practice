@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "description": "歷屆國中教甄試題；由前期逐題詳解 Word 轉檔，保留原題庫答案。部分政策或法規有命題年度限制；本版本不代表官方重新核定答案。",
+  "totalSourceQuestions": 730,
+  "totalImportedQuestions": 722,
+  "totalExcluded": 8,
+  "files": [
+    {
+      "file": "./data/banks/108117.json",
+      "name": "111臺北市（特殊教育科）",
+      "year": "111",
+      "count": 38
+    },
+    {
+      "file": "./data/banks/108308.json",
+      "name": "111新北市",
+      "year": "111",
+      "count": 79
+    },
+    {
+      "file": "./data/banks/112-taipei.json",
+      "name": "112臺北市",
+      "year": "112",
+      "count": 40
+    },
+    {
+      "file": "./data/banks/112-newtaipei.json",
+      "name": "112新北市",
+      "year": "112",
+      "count": 80
+    },
+    {
+      "file": "./data/banks/52575.json",
+      "name": "105新北市",
+      "year": "105",
+      "count": 99
+    },
+    {
+      "file": "./data/banks/62146.json",
+      "name": "106新北市",
+      "year": "106",
+      "count": 100
+    },
+    {
+      "file": "./data/banks/69441.json",
+      "name": "107臺北市",
+      "year": "107",
+      "count": 38
+    },
+    {
+      "file": "./data/banks/69805.json",
+      "name": "107新北市",
+      "year": "107",
+      "count": 99
+    },
+    {
+      "file": "./data/banks/76488.json",
+      "name": "108新北市",
+      "year": "108",
+      "count": 99
+    },
+    {
+      "file": "./data/banks/85954.json",
+      "name": "109臺北市",
+      "year": "109",
+      "count": 50
+    }
+  ]
+}
