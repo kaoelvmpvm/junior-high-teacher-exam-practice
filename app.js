@@ -1,11 +1,11 @@
-/* 國中教甄知識刷題室 — 無後端靜態版 v1.0
+/* 國中教甄知識刷題室 — 無後端靜態版 v1.2
  * 所有個人資料僅儲存在瀏覽器 localStorage。
  * 匯入的題目一律使用 textContent 渲染，避免 HTML 注入。
  */
 (function () {
   'use strict';
   const $ = function (id) { return document.getElementById(id); };
-  const KEY = { custom: 'jte.custom.v1', attempts: 'jte.attempts.v1', wrong: 'jte.wrong.v1', bookmarks: 'jte.bookmarks.v1' };
+  const KEY = { custom: 'jte.custom.v1', attempts: 'jte.attempts.v1', wrong: 'jte.wrong.v1', bookmarks: 'jte.bookmarks.v1', notes: 'jte.notes.v1' };
   const LETTERS = 'ABCDEF';
   const MAX_IMPORT = 3000;
   const MAX_FILE_BYTES = 4 * 1024 * 1024;
@@ -15,6 +15,7 @@
   let attempts = [];
   let wrongIds = [];
   let bookmarkIds = [];
+  let notes = Object.create(null);
   let session = null;
   let toastTimer = null;
   let dataLoaded = false;
@@ -44,6 +45,49 @@
   }
   function safeArray(value) { return Array.isArray(value) ? value : []; }
   function uniqueStrings(value) { return Array.from(new Set(safeArray(value).filter(function (v) { return typeof v === 'string'; }))); }
+
+  // Note records are keyed by stable question IDs; legacy string records are accepted.
+  // Treat backup data as untrusted JSON: ignore malformed entries and prototype keys.
+  function normalizeNotes(value) {
+    const result = Object.create(null);
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return result;
+    Object.entries(value).forEach(function (entry) {
+      const id = entry[0], raw = entry[1];
+      if (!id || id.length > 220 || id === '__proto__' || id === 'constructor' || id === 'prototype') return;
+      const content = typeof raw === 'string' ? raw : (raw && typeof raw.text === 'string' ? raw.text : '');
+      if (!content.trim()) return;
+      result[id] = {
+        text: content.slice(0, 3000),
+        updatedAt: raw && typeof raw.updatedAt === 'string' ? raw.updatedAt : ''
+      };
+    });
+    return result;
+  }
+  function getNote(id) { return notes[id] && typeof notes[id].text === 'string' ? notes[id].text : ''; }
+  function persistNote(id, content) {
+    if (typeof id !== 'string' || !id || id.length > 220) return false;
+    const next = Object.assign(Object.create(null), notes);
+    const text = String(content || '').slice(0, 3000);
+    if (text.trim()) next[id] = { text:text, updatedAt:new Date().toISOString() };
+    else delete next[id];
+    if (!save(KEY.notes, next)) return false;
+    notes = next;
+    $('library-notes-count').textContent = String(Object.keys(notes).length);
+    return true;
+  }
+  function renderNotePanel(q) {
+    const existing = getNote(q.id);
+    const reminder = $('saved-note-reminder');
+    reminder.hidden = !existing;
+    $('saved-note-text').textContent = existing;
+    $('note-intro').textContent = existing
+      ? '再次答錯時，系統會自動提醒你上次寫的內容。現在也可以修改筆記。'
+      : '這題還沒有個人筆記。想想這次的錯因，寫下正確判斷的線索，下次答錯就會自動提醒。';
+    $('note-editor').value = existing;
+    $('note-length').textContent = existing.length + ' / 3000';
+    $('note-status').textContent = existing ? '先前筆記已載入；修改後自動儲存。' : '輸入內容會自動儲存到此瀏覽器。';
+  }
+
   function shortText(str, max) {
     const value = String(str || '').trim();
     return value.length > max ? value.slice(0, max) + '…' : value;
@@ -221,8 +265,34 @@
           refreshUI();
           toast('已移出錯題本。');
         });
-        actions.append(practice, remove);
-        card.append(head, actions);
+        const noteContent = getNote(q.id);
+        const preview = textNode('p', 'wrong-note-preview', noteContent ? '我的筆記：' + shortText(noteContent, 180) : '尚未寫個人錯題筆記');
+        const edit = textNode('button', 'small-btn note-edit-toggle', noteContent ? '查看／修改筆記' : '新增筆記');
+        edit.type = 'button';
+        edit.setAttribute('aria-expanded', 'false');
+        const editor = textNode('textarea', 'note-editor wrong-note-editor', '');
+        editor.value = noteContent;
+        editor.maxLength = 3000;
+        editor.rows = 3;
+        editor.placeholder = '記錄這題的錯因、辨識線索及容易混淆的觀念……';
+        editor.setAttribute('aria-label', '編輯題目 ' + q.id + ' 的個人筆記');
+        editor.hidden = true;
+        const noteStatus = textNode('p', 'small-muted', '輸入時自動儲存筆記。');
+        noteStatus.hidden = true;
+        edit.addEventListener('click', function () {
+          editor.hidden = !editor.hidden;
+          noteStatus.hidden = editor.hidden;
+          edit.setAttribute('aria-expanded', String(!editor.hidden));
+          if (!editor.hidden) editor.focus();
+        });
+        editor.addEventListener('input', function () {
+          if (persistNote(q.id, editor.value)) {
+            preview.textContent = getNote(q.id) ? '我的筆記：' + shortText(getNote(q.id), 180) : '尚未寫個人錯題筆記';
+            noteStatus.textContent = '✓ 筆記已自動儲存';
+          } else noteStatus.textContent = '筆記儲存失敗，請先匯出備份並檢查瀏覽器儲存空間。';
+        });
+        actions.append(practice, edit, remove);
+        card.append(head, preview, actions, editor, noteStatus);
         list.append(card);
       });
     }
@@ -230,6 +300,7 @@
   }
   function renderLibrary() {
     $('library-bank-count').textContent = String(bankQuestions.length);
+    $('library-notes-count').textContent = String(Object.keys(notes).length);
     $('library-demo-count').textContent = String(demoQuestions.length);
     $('library-custom-count').textContent = String(customQuestions.length);
     $('library-bookmark-count').textContent = String(bookmarkIds.length);
@@ -287,6 +358,7 @@
     $('bookmark-btn').textContent = bookmarkIds.includes(q.id) ? '★ 已收藏' : '☆ 加入收藏';
     $('answer-feedback').hidden = true;
     $('explanation-panel').hidden = true;
+    $('saved-note-reminder').hidden = true;
     $('next-btn').disabled = true;
     $('next-btn').textContent = session.index === session.questions.length - 1 ? '完成本回 →' : '下一題 →';
     const options = $('question-options');
@@ -320,36 +392,15 @@
     const feedback = $('answer-feedback');
     feedback.hidden = false;
     feedback.className = 'answer-feedback ' + (correct ? 'is-correct' : 'is-wrong');
-    feedback.textContent = correct ? '✓ 答對了！請繼續閱讀詳解，鞏固考點。' : '✕ 本題答錯。正確答案是 ' + LETTERS[q.answer] + '，請閱讀下方解析。';
-    renderExplanation(q);
-    $('explanation-panel').hidden = false;
+    feedback.textContent = correct ? '✓ 答對了！這題不會主動顯示筆記。' : '✕ 本題答錯。正確答案是 ' + LETTERS[q.answer] + '，請查看下方自己的錯題筆記。';
+    if (!correct) {
+      renderNotePanel(q);
+      $('explanation-panel').hidden = false;
+    } else $('explanation-panel').hidden = true;
     $('next-btn').disabled = false;
     $('progress-percent').textContent = Math.round((session.index + 1) / session.questions.length * 100) + '%';
     $('progress-bar').style.width = ((session.index + 1) / session.questions.length * 100) + '%';
     refreshUI();
-  }
-  function addExplanationSection(target, title, content) {
-    if (!content) return;
-    const section = textNode('section', 'explanation-section', '');
-    section.append(textNode('h4', '', title), textNode('p', '', content));
-    target.append(section);
-  }
-  function renderExplanation(q) {
-    const target = $('explanation-body');
-    target.replaceChildren();
-    if (q.kind === 'bank') addExplanationSection(target, '歷史試題提醒', '本題採用原題庫於民國 ' + (q.year || '未知') + ' 年的答案與解析，並非重新查核的官方現行法規。涉及法令、教育政策或制度時，請另行核對最新規定。');
-    addExplanationSection(target, '核心概念', q.explanation || '本題尚未提供整體詳解，可先依正確答案核對；後續可透過題庫 JSON 補齊。');
-    const optionBlock = textNode('section', 'explanation-section', '');
-    optionBlock.append(textNode('h4', '', '選項逐項解析'));
-    q.options.forEach(function (option, i) {
-      const line = textNode('div', 'explanation-option', '');
-      line.append(textNode('strong', '', LETTERS[i] + (i === q.answer ? ' ✓' : '')), textNode('span', '', q.optionExplanations[i] || (i === q.answer ? '正確答案：' + option : '尚無此選項的個別解析。')));
-      optionBlock.append(line);
-    });
-    target.append(optionBlock);
-    addExplanationSection(target, '破題關鍵', q.keyPoint);
-    addExplanationSection(target, '易錯觀念', q.trap);
-    addExplanationSection(target, '考場記憶提示', q.mnemonic);
   }
   function nextQuestion() {
     if (!session || session.selected === null) return;
@@ -446,7 +497,7 @@
   function exportProgress() {
     downloadJson('教甄刷題-學習紀錄.json', {
       version:1, exportedAt:new Date().toISOString(),
-      attempts:attempts, wrongIds:wrongIds, bookmarkIds:bookmarkIds
+      attempts:attempts, wrongIds:wrongIds, bookmarkIds:bookmarkIds, notes:notes
     });
   }
   async function importProgress(file) {
@@ -462,10 +513,14 @@
           Number.isInteger(a.selected) && a.selected >= 0 && a.selected <= 5 &&
           typeof a.at === 'string';
       }).slice(-10000);
-      if (!window.confirm('將以備份內容取代目前的學習紀錄（不影響題庫）。確定匯入嗎？')) return;
+      if (!window.confirm('將以備份取代目前的作答紀錄、錯題本與收藏；如果備份含筆記，也將取代目前筆記。確定匯入嗎？')) return;
       attempts = cleanedAttempts;
       wrongIds = uniqueStrings(parsed.wrongIds);
       bookmarkIds = uniqueStrings(parsed.bookmarkIds);
+      if (Object.prototype.hasOwnProperty.call(parsed, 'notes')) {
+        notes = normalizeNotes(parsed.notes);
+        save(KEY.notes, notes);
+      }
       save(KEY.attempts, attempts);
       save(KEY.wrong, wrongIds);
       save(KEY.bookmarks, bookmarkIds);
@@ -533,6 +588,7 @@
     attempts = safeArray(read(KEY.attempts, [])).filter(function (a) { return a && typeof a.id === 'string' && typeof a.correct === 'boolean'; });
     wrongIds = uniqueStrings(read(KEY.wrong, []));
     bookmarkIds = uniqueStrings(read(KEY.bookmarks, []));
+    notes = normalizeNotes(read(KEY.notes, {}));
     document.querySelectorAll('[data-nav]').forEach(function (node) {
       node.addEventListener('click', function (event) {
         if (node.tagName === 'A') event.preventDefault();
@@ -544,6 +600,16 @@
     });
     $('setup-form').addEventListener('submit', function (event) { event.preventDefault(); startFromFilters(); });
     $('bookmark-btn').addEventListener('click', toggleBookmark);
+    $('note-editor').addEventListener('input', function () {
+      if (!session || session.selected === null) return;
+      const q = session.questions[session.index];
+      if (session.selected === q.answer) return;
+      const content = $('note-editor').value;
+      $('note-length').textContent = content.length + ' / 3000';
+      $('note-status').textContent = persistNote(q.id, content)
+        ? '✓ 筆記已自動儲存，下次答錯會主動提醒。'
+        : '✕ 筆記尚未儲存成功，請檢查儲存空間。';
+    });
     $('next-btn').addEventListener('click', nextQuestion);
     $('exit-btn').addEventListener('click', exitSession);
     $('again-btn').addEventListener('click', exitSession);
@@ -568,12 +634,12 @@
     $('import-progress-file').addEventListener('change', function (event) { importProgress(event.target.files[0]); });
     $('import-progress-btn').addEventListener('click', function () { $('import-progress-file').click(); });
     $('reset-progress').addEventListener('click', function () {
-      if (!window.confirm('確定清除作答紀錄、錯題本及收藏嗎？已匯入的題庫會保留。')) return;
+      if (!window.confirm('確定清除作答紀錄、錯題本及收藏嗎？已寫的個人筆記與題庫都會保留。')) return;
       attempts = []; wrongIds = []; bookmarkIds = [];
       save(KEY.attempts, attempts); save(KEY.wrong, wrongIds); save(KEY.bookmarks, bookmarkIds);
       exitSession();
       refreshUI();
-      toast('學習紀錄已清除，個人題庫仍保留。');
+      toast('作答紀錄已清除；個人筆記和題庫仍保留。');
     });
     document.addEventListener('keydown', function (event) {
       if ($('view-practice').hidden || $('quiz-stage').hidden || !session) return;
