@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#14283d">
+  <meta name="description" content="國中教師甄試教育專業科刷題系統：練習、逐項詳解、錯題複習與個人學習紀錄。">
+  <title>國中教甄｜知識刷題室</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#home" class="brand" data-nav="home" aria-label="知識刷題室首頁">
+          <span class="brand-symbol" aria-hidden="true">研</span>
+          <span class="brand-words"><strong>知識刷題室</strong><small>國中教師甄試 · 教育專業科</small></span>
+        </a>
+        <nav class="main-nav" aria-label="主要功能">
+          <button type="button" class="nav-link active" data-nav="home">總覽</button>
+          <button type="button" class="nav-link" data-nav="practice">開始刷題</button>
+          <button type="button" class="nav-link" data-nav="wrong">錯題本 <span class="nav-count" id="nav-wrong-count">0</span></button>
+          <button type="button" class="nav-link" data-nav="library">題庫管理</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="content">
+      <section id="view-home" class="view active" aria-labelledby="home-title">
+        <div class="hero">
+          <div class="hero-content">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> 教甄備考練習平台</span>
+            <h1 id="home-title">把每一道題目，<br><em>變成會留下的知識。</em></h1>
+            <p>不只核對答案。透過考點解析、選項辨析與錯題回練，逐步建立自己的教育專業知識地圖。</p>
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary" data-nav="practice">開始一回練習 <span aria-hidden="true">→</span></button>
+              <button type="button" class="btn btn-quiet-light" data-nav="library">匯入自己的題庫</button>
+            </div>
+            <p class="hero-footnote">目前內建題目為原創示範題，並非歷屆教甄原題。</p>
+          </div>
+          <div class="hero-illustration" aria-hidden="true">
+            <div class="sheet sheet-back"></div>
+            <div class="sheet sheet-front">
+              <span class="sheet-kicker">TODAY'S STUDY</span>
+              <span class="sheet-title">教育專業科</span>
+              <span class="sheet-line long"></span><span class="sheet-line"></span><span class="sheet-line medium"></span>
+              <span class="sheet-option"><i></i><b></b></span>
+              <span class="sheet-option chosen"><i>✓</i><b></b></span>
+              <span class="sheet-option"><i></i><b></b></span>
+            </div>
+            <span class="floating-tag">✓ 概念理解</span>
+            <span class="illustration-star">✦</span>
+          </div>
+        </div>
+
+        <div class="section-heading home-section-heading"><div><span class="section-kicker">YOUR PROGRESS</span><h2>學習概況</h2></div><span class="subtle-label">紀錄僅儲存在目前的瀏覽器</span></div>
+        <div class="stat-grid">
+          <article class="stat-card"><span class="stat-icon lavender">▦</span><span class="stat-title">可練習題數</span><strong id="stat-total">—</strong><span class="stat-hint">內建與個人匯入題庫</span></article>
+          <article class="stat-card"><span class="stat-icon mint">↗</span><span class="stat-title">累積作答次數</span><strong id="stat-attempts">—</strong><span class="stat-hint">同題重練會累計</span></article>
+          <article class="stat-card"><span class="stat-icon peach">◎</span><span class="stat-title">歷次作答正確率</span><strong id="stat-accuracy">—</strong><span class="stat-hint">按所有作答紀錄計算</span></article>
+          <article class="stat-card"><span class="stat-icon sky">↺</span><span class="stat-title">待複習錯題</span><strong id="stat-wrong">—</strong><span class="stat-hint">重新答對即可移出</span></article>
+        </div>
+
+        <div class="home-panels">
+          <article class="panel panel-padding">
+            <div class="panel-heading"><div><span class="section-kicker">KNOWLEDGE MAP</span><h3>主題分布</h3></div><span id="category-total" class="small-muted"></span></div>
+            <div id="category-breakdown" class="category-breakdown"><p class="empty-copy">正在載入題庫……</p></div>
+          </article>
+          <article class="panel panel-padding next-step-panel">
+            <span class="section-kicker">HOW IT WORKS</span><h3>你的三步複習法</h3>
+            <ol class="steps">
+              <li><span>01</span><div><strong>選擇主題，開始作答</strong><p>依知識領域、題庫來源及練習模式篩選。</p></div></li>
+              <li><span>02</span><div><strong>逐項釐清選項</strong><p>答後閱讀破題重點、選項解釋與易混淆觀念。</p></div></li>
+              <li><span>03</span><div><strong>回練錯題，修正盲點</strong><p>錯題自動收錄，再次答對即可移出錯題本。</p></div></li>
+            </ol>
+            <button type="button" class="inline-action" data-nav="practice">進入練習設定 <span aria-hidden="true">↗</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section id="view-practice" class="view" aria-labelledby="practice-title" hidden>
+        <div class="page-intro"><span class="section-kicker">PRACTICE ROOM</span><h1 id="practice-title">開始一回練習</h1><p>依自己的複習需求組卷，答題後立即查看完整解析。</p></div>
+        <div id="setup-screen" class="panel setup-panel">
+          <form id="setup-form">
+            <div class="setup-heading"><div class="setting-number">01</div><div><h2>設定練習範圍</h2><p>每次作答前都可以調整，題數不會超過實際符合條件的題目。</p></div></div>
+            <div class="form-grid">
+              <label class="field"><span>練習模式</span><select id="filter-mode"><option value="all">綜合刷題</option><option value="wrong">錯題回練</option><option value="bookmark">收藏複習</option><option value="unanswered">尚未作答</option></select></label>
+              <label class="field"><span>知識領域</span><select id="filter-category"><option value="all">全部領域</option></select></label>
+              <label class="field"><span>題庫來源</span><select id="filter-bank"><option value="all">全部題庫</option><option value="demo">內建示範題</option><option value="custom">我的匯入題庫</option></select></label>
+              <label class="field"><span>本回題數</span><select id="filter-count"><option value="5">5 題</option><option value="10" selected>10 題</option><option value="20">20 題</option><option value="all">全部符合題目</option></select></label>
+            </div>
+            <div class="setup-bottom"><div class="order-box"><span class="field-caption">出題順序</span><label><input type="radio" name="order" value="random" checked> 隨機出題</label><label><input type="radio" name="order" value="sequence"> 依題號排序</label></div><p id="available-count" class="available-count">正在讀取題目……</p></div>
+            <div class="setup-actions"><button id="start-btn" class="btn btn-primary" type="submit">開始作答 <span aria-hidden="true">→</span></button><p id="setup-status" role="status" class="status-text"></p></div>
+          </form>
+        </div>
+
+        <div id="quiz-stage" class="quiz-stage" hidden>
+          <div class="quiz-topbar"><div><span id="quiz-category" class="topic-chip"></span><span id="quiz-source" class="source-label"></span></div><button type="button" id="exit-btn" class="quiet-button">結束本回練習 ×</button></div>
+          <div class="progress-heading"><strong id="progress-text">第 1 題 / 共 10 題</strong><span id="progress-percent">0%</span></div><div class="progress-track"><div id="progress-bar" class="progress-fill"></div></div>
+          <article class="panel question-card">
+            <div class="question-head"><span class="question-counter" id="question-number">QUESTION 01</span><button type="button" class="bookmark-btn" id="bookmark-btn" aria-pressed="false">☆ 加入收藏</button></div>
+            <h2 id="question-stem" class="question-stem"></h2>
+            <div id="question-options" class="question-options" aria-label="答案選項"></div>
+            <div id="answer-feedback" class="answer-feedback" role="status" hidden></div>
+          </article>
+          <article id="explanation-panel" class="panel explanation-panel" hidden>
+            <div class="explanation-heading"><span class="section-kicker">ANSWER REVIEW</span><h3>逐題詳解</h3></div>
+            <div id="explanation-body"></div>
+          </article>
+          <div class="quiz-actions"><span class="small-muted">可使用鍵盤 1–6 選答案，Enter 進入下一題</span><button type="button" id="next-btn" class="btn btn-primary" disabled>下一題 <span aria-hidden="true">→</span></button></div>
+        </div>
+
+        <div id="summary-stage" class="panel summary-panel" hidden>
+          <span class="summary-ornament" aria-hidden="true">✧</span><span class="section-kicker">SESSION COMPLETE</span><h2>這回練習完成了</h2>
+          <p>每一道錯題都是下一次複習的線索。</p>
+          <strong id="summary-score" class="summary-score">0%</strong><span class="small-muted">本回答對率</span>
+          <div class="summary-grid"><div><strong id="summary-correct">0 / 0</strong><span>答對題數</span></div><div><strong id="summary-wrong">0</strong><span>答錯題數</span></div><div><strong id="summary-bookmark">0</strong><span>目前收藏題數</span></div></div>
+          <div class="summary-actions"><button type="button" class="btn btn-primary" id="again-btn">再練一回</button><button type="button" class="btn btn-secondary" data-nav="wrong">檢視錯題本</button></div>
+        </div>
+      </section>
+
+      <section id="view-wrong" class="view" aria-labelledby="wrong-title" hidden>
+        <div class="page-intro"><span class="section-kicker">REVIEW NOTEBOOK</span><h1 id="wrong-title">我的錯題本</h1><p>錯題會自動收錄。再次練習並答對後，系統會將該題移出待複習清單。</p></div>
+        <div class="list-toolbar"><span id="wrong-summary" class="small-muted">讀取中……</span><button class="btn btn-primary" id="practice-wrong-btn" type="button">開始錯題回練 <span aria-hidden="true">→</span></button></div>
+        <div id="wrong-list" class="item-list"></div>
+      </section>
+
+      <section id="view-library" class="view" aria-labelledby="library-title" hidden>
+        <div class="page-intro"><span class="section-kicker">QUESTION LIBRARY</span><h1 id="library-title">題庫管理</h1><p>目前先以示範題進行功能測試；日後可以把整理好的歷屆題庫轉成 JSON 匯入。</p></div>
+        <div class="library-grid">
+          <article class="panel panel-padding">
+            <div class="panel-heading"><div><span class="section-kicker">IMPORT</span><h2>匯入個人題庫</h2></div><span class="file-format">.json</span></div>
+            <p class="body-copy">選擇 UTF-8 JSON 檔案。每題需包含題目、選項及正確答案；詳解欄位可逐步補齊。資料會保存在目前瀏覽器，不會上傳伺服器。</p>
+            <label for="import-file" class="upload-box"><span class="upload-icon">＋</span><strong>選取 JSON 題庫檔案</strong><span>支援一次匯入多道題目；重複 ID 會自動略過</span><input type="file" id="import-file" accept=".json,application/json"></label>
+            <p class="status-text" id="import-status" role="status"></p>
+            <button type="button" id="download-sample" class="inline-action">下載示範題庫格式 <span aria-hidden="true">↓</span></button>
+          </article>
+          <article class="panel panel-padding">
+            <span class="section-kicker">LOCAL STORAGE</span><h2>本機資料</h2>
+            <div class="data-summary"><div><span>內建示範題</span><strong id="library-demo-count">—</strong></div><div><span>自行匯入題目</span><strong id="library-custom-count">—</strong></div><div><span>已收藏題目</span><strong id="library-bookmark-count">—</strong></div></div>
+            <div class="data-actions">
+              <button type="button" class="btn btn-secondary" id="export-progress">匯出學習紀錄</button>
+              <button type="button" class="btn btn-secondary" id="export-custom">匯出個人題庫</button>
+              <button type="button" class="btn btn-danger-quiet" id="reset-progress">清除學習紀錄</button>
+            </div>
+            <p class="helper-note">更換瀏覽器、清除網站資料或使用無痕模式，可能遺失紀錄。建議定期匯出備份。</p>
+          </article>
+        </div>
+        <article class="panel panel-padding schema-panel"><div class="panel-heading"><div><span class="section-kicker">DATA SPECIFICATION</span><h2>題庫資料格式</h2></div><span class="small-muted">正確答案採從 0 開始的選項索引，亦可使用 A、B、C、D</span></div>
+          <pre class="code-sample" id="schema-preview"></pre>
+          <p class="helper-note">選項解析、破題關鍵、易錯觀念等為選填欄位；沒有提供的詳解不會由系統自行生成。</p>
+        </article>
+      </section>
+    </main>
+    <footer class="site-footer"><span>國中教甄 · 知識刷題室</span><span>自主備考工具｜非官方試題發布平台｜資料僅存於本機</span></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </div>
+</body>
+</html>
