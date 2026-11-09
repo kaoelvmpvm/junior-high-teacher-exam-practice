@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "description": "歷屆國中教甄試題；由前期逐題詳解 Word 轉檔，保留原題庫答案。部分政策或法規有命題年度限制；本版本不代表官方重新核定答案。",
-  "totalSourceQuestions": 730,
-  "totalImportedQuestions": 722,
-  "totalExcluded": 8,
+  "description": "國中教甄歷屆試題16份不同考卷（另有一份來源重複已合併）。其中722題有逐題詳解、382題來自原始HTML尚待補寫詳解；答案依原題庫，不代表逐題官方重新核定。題組、圖片、複選與刪題等暫不納入一般單選練習。",
+  "totalSourceQuestions": 1150,
+  "totalImportedQuestions": 1104,
+  "totalExcluded": 46,
   "files": [
     {
       "file": "./data/banks/108117.json",
@@ -64,6 +64,44 @@
       "name": "109臺北市",
       "year": "109",
       "count": 50
+    },
+    {
+      "file": "./data/banks/86959.json",
+      "name": "109新北市",
+      "year": "109",
+      "count": 90
+    },
+    {
+      "file": "./data/banks/120111.json",
+      "name": "113新北市",
+      "year": "113",
+      "count": 76
+    },
+    {
+      "file": "./data/banks/127214.json",
+      "name": "114新北市",
+      "year": "114",
+      "count": 75
+    },
+    {
+      "file": "./data/banks/127435.json",
+      "name": "114臺北市",
+      "year": "114",
+      "count": 34
+    },
+    {
+      "file": "./data/banks/140250.json",
+      "name": "115新北市",
+      "year": "115",
+      "count": 68
+    },
+    {
+      "file": "./data/banks/140523.json",
+      "name": "115臺北市",
+      "year": "115",
+      "count": 39
     }
-  ]
+  ],
+  "detailedExplanations": 722,
+  "pendingExplanations": 382
 }
