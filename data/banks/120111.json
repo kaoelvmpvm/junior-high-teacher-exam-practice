@@ -1,0 +1,1469 @@
+{
+  "version": 1,
+  "type": "historical-exam-unreviewed",
+  "source": "使用者原始 HTML 考卷；題目與答案已轉為單選題；深度詳解尚未撰寫或校核",
+  "exam": "113新北市國中教甄（教育專業科）",
+  "originalQuestions": 80,
+  "detectedQuestionHeaders": 79,
+  "importedQuestions": 76,
+  "excluded": [
+    {
+      "number": 77,
+      "reason": "選項格式異常"
+    },
+    {
+      "number": 79,
+      "reason": "題組需共用題幹"
+    },
+    {
+      "number": 80,
+      "reason": "題組需共用題幹"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HIST-120111-001",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "豪斯（House）途徑目標理論的環境因素是由下列哪一項因素所構成？",
+      "options": [
+        "內控信念",
+        "自我能力觀",
+        "任務結構",
+        "部屬的工作滿意度"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-002",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "根據哈爾品及克羅夫（Halpin & Croft）提出的組織氣氛類型，校長行為可分為成果 強調、疏遠、關懷、以身作則等四個層面，根據其高低程度交互結合成六種氣氛類 型。下列哪個氣氛類型為低強調成果、低疏遠、高關懷、高以身作則?",
+      "options": [
+        "親密型",
+        "封閉型",
+        "自主型",
+        "開放型"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-003",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "教師評鑑的方式如果採用 Bowman（1999）提出的多軌系統（multitrack system）以協 助教師的教學改進。符合哪一項教師評鑑的原則？",
+      "options": [
+        "程序正義原則",
+        "個別差異原則",
+        "專業判斷原則",
+        "經濟效能原則"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-004",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "「校園事件處理會議」（簡稱校事會議）對校園中處理教師有「不適任」之案件，透過明確規範「調查」及「輔導」程序，以保障教師權益。哪一項的敘述為非？",
+      "options": [
+        "學校應於受理檢舉事件後七個工作日內召開校事會議審議",
+        "校事會議任一性別委員人數不得少於委員總數三分之一",
+        "校事會議委員，得同時擔任其審議處理事件之調查小組委員",
+        "調查小組應於召開第一次會議之日起二個月內完成調查報告"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-005",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "布萊克與墨頓（Blake & Mouton）提出的管理方格論理論中，他們以關心工作為橫座 標、關心人員為縱座標，每軸各分為九格，最基本分為五種領導形式，下列哪一類型 是領導者對工作要求少，對人員亦不大關心?",
+      "options": [
+        "無為型",
+        "懷柔型",
+        "折衷型",
+        "業績中心型"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-006",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "轉型領導（transformational leadership）是繼魅力領導之後，深受重視的領導理論之 一。轉型領導係領導者與成員建立積極、豐富、情感關係，使成員建立對共同目標的 承諾，轉型領導主要是由四個要素所組成，下列哪一個因素，不屬於轉型領導的內 涵？",
+      "options": [
+        "魅力影響",
+        "倡導行為",
+        "知識啟發",
+        "個別關懷"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-007",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "108 課綱主要以不侷限於以往的學科知識，而是擴展到培養學生的軟實力為主的教 學方式為目標，因此「素養」就成為極其重要的課程主軸，下列哪一個不屬於核心素 養的內容？",
+      "options": [
+        "國際理解",
+        "自我精進",
+        "系統思考",
+        "適性扎根"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-008",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "國際閱讀素養調查「PIRLS」（Progress in International Reading Literacy Study，簡稱 PIRLS）主要為調查不同國家四年級學童的閱讀素養，根據其評估架構如果要求學生歸納出文章作者對於某位人物的整體評價的提問問題，是屬於哪一層次的提問問題？",
+      "options": [
+        "直接提取",
+        "直接推論",
+        "詮釋、整合觀點和訊息",
+        "評估和批判內容"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-009",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "有關教育基本法第四條之規定，下列何者應考慮其自主性及特殊性，依法令予以特 別保障?",
+      "options": [
+        "弱勢族群之教育",
+        "教育經費之編列",
+        "教育人員之工作、待遇",
+        "依教育目的興學之自由"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-010",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "智力正常或以上之判斷，以 WISC 第四版全量表（FSIQ）、語文理解（VCI）或知覺 推理(PRI)等任一因素指數為準；WISC 第五版以全量表（FSIQ）、非語文指數（NVI） 或一般能力指數（GAI）為準，參考值為何？",
+      "options": [
+        "平均數負 1.5 個標準差之 95%信賴區間",
+        "平均數負 1.96 個標準差之 95%信賴區間",
+        "平均數負 2.576 個標準差之 95%信賴區間",
+        "平均數負 3 個標準差之 95%信賴區間"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-011",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "以下何者不是新北教育 123？",
+      "options": [
+        "一本初衷",
+        "菁英、專業",
+        "品德、適性",
+        "愛、健康、競爭力"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-012",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "有關學籍保管與整理、學籍編制、課表編排是屬於學校哪一處室之工作範圍？",
+      "options": [
+        "教務處",
+        "學務處",
+        "總務處",
+        "輔導室"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-013",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "以下何者不是學校行政的意義？",
+      "options": [
+        "學校行政是系統化的管理或經營",
+        "學校行政的目的在達成教育目標",
+        "學校行政所處理的是學校教學事務",
+        "學校行政既求有效亦求經濟"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-014",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "配課除須依法令規定外，尚需注意以下哪個原則？",
+      "options": [
+        "無需考慮教師個人本身之意願",
+        "參考教師過去的背景及教學經驗",
+        "依家長會及部分學生的意見排課",
+        "依各班學生升學之需求，要求教師調整課程內容"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-015",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "為促進性別地位之實質平等，消除性別歧視，維護人格尊嚴，厚植並建立性別平等之 教育資源及環境，是以下哪一種法規制定之要旨?",
+      "options": [
+        "性別平等工作法",
+        "性侵害犯罪防治法",
+        "性騷擾防治法",
+        "性別平等教育法"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-016",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "國民中學教師如要實施正向領導，以下何者不是其策略之一？",
+      "options": [
+        "正向評量",
+        "正向溝通",
+        "正向關係",
+        "正向意義"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-017",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "以下何者不是全面品質管理的重要內涵？",
+      "options": [
+        "回饋機制",
+        "持續改進",
+        "顧客導向",
+        "部分品管"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-018",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "以下何者不是彼得.聖吉（Peter M. Senge）所倡導學習型組織中的五項修練之一？",
+      "options": [
+        "自我精進",
+        "系統思考",
+        "共享願景",
+        "個別學習"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-019",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "以下何者不是學校或教育行政計畫的程序之一？",
+      "options": [
+        "認識問題，界定目標",
+        "設定前提或判斷標準",
+        "進行資料統計分析",
+        "研擬各種可行的方案"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-020",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "以下何者不是學校行政有效溝通原則？",
+      "options": [
+        "善用溝通媒介",
+        "運用單向溝通",
+        "培養傾聽技巧",
+        "訊息簡明扼要"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-021",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "一位學生在數學考試中表現不佳，對自己的數學能力感到沮喪且認為自己永遠無法 學好數學。這位學生最可能持有哪種觀點？",
+      "options": [
+        "能力實存觀",
+        "精熟目標",
+        "能力增長觀",
+        "成就動機"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-022",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "經閱讀而學習的歷程，以下何者正確 ？",
+      "options": [
+        "文意理解→解碼→推論理解→理解監控",
+        "文意理解→解碼→理解監控→推論理解",
+        "解碼→文意理解→理解監控→推論理解",
+        "解碼→文意理解→推論理解→理解監控"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-023",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "在篩選低成就學生時的步驟中，哪個選項是包含在此過程中的？",
+      "options": [
+        "實施專注力測驗",
+        "實施智力測驗",
+        "進行身體檢查",
+        "進行課外活動觀察"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-024",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "自我決定論中的「自主性」指的是什麼？",
+      "options": [
+        "對自己行為負責任的能力",
+        "對外在獎勵和懲罰的反應",
+        "追求人際關係和社交交流",
+        "對自己生活目標的追求和努力"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-025",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "根據教育心理學的分類，以下哪一種學習類別最強調在學習過程中學習者如何組織、 監控和調整他們的學習策略？",
+      "options": [
+        "連結學習",
+        "程序性學習",
+        "歸納推理學習",
+        "後設認知學習"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-026",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "以下哪一項最能描述鷹架構築（scaffolding by Vygotsky）的概念？",
+      "options": [
+        "學習者在學習過程中自主探索和發現知識",
+        "教師提供學生所需的學習材料和資源",
+        "學習者透過和更有經驗的人合作，逐步提升能力",
+        "學習者獨立進行學習活動並自主評估自己的學習成果"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-027",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "以下哪一項最能描述精準教學的步驟？",
+      "options": [
+        "提供傳統的講授式教學",
+        "讓學生自主學習，教師僅提供輔導",
+        "行為分析、訂目標、記錄實施、圖示學生表現、記錄教學法、分析資料是否達目 標",
+        "讓學生自由探索，教師僅提供資源和支持"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-028",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "以下哪一項最能描述善用回饋的策略？",
+      "options": [
+        "提供物質性獎勵以鼓勵學生的表現",
+        "提供社會性酬賞，如口語鼓勵，以增強內在動機",
+        "不提供回饋，讓學生自行評價表現",
+        "提供虛擬獎勵，如網路遊戲中的獎勵道具"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-029",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "在一個學習小組中，某位同學總是在開始學習新內容時找出各種藉口，聲稱自己不 具備足夠的能力來應對挑戰，而在學習過程中也時常表現出消極的態度，最終導致 學習成就的下降。這種行為最符合以下哪種描述？",
+      "options": [
+        "自我認同表現",
+        "學習興趣缺乏",
+        "自我設限行為",
+        "自我認識實現"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-030",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "小明在學校中學習時，受到老師和同學的激勵和鼓勵，也觀察到其他同學的學習行 為。根據社會認知理論，以上描述強調學習來自於以下哪個因素？",
+      "options": [
+        "個人",
+        "行為",
+        "環境",
+        "情感"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-031",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "「阿宏生長在醫師世家，他的祖父母與父母親都是醫師；從小雖然他特別喜愛寫詩與文學，但是他從國中起就立志也要當一名醫師。」請問：阿宏屬於哪一種認同型態？",
+      "options": [
+        "定向型統合",
+        "未定型統合",
+        "早閉型統合",
+        "迷失型統合"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-032",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "「曉美很討厭被刺耳的鬧鐘聲吵醒，所以她訓練讓自己能在鬧鐘鈴響之前起床，以 避免聽到刺耳的聲音。」請問曉美是運用那一項行為法則？",
+      "options": [
+        "正增強作用",
+        "負增強作用",
+        "削弱作用",
+        "懲罰作用"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-033",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "下列關於「近側發展區」（zone of proximal development, ZPD）的敘述，何者正確？",
+      "options": [
+        "學習者能夠自主完成的任務範圍",
+        "學習已知的知識和技能範圍",
+        "學習者能夠在有指導下完成的任務範圍",
+        "學習者無法掌握且難度過高的任務範圍"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-034",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "「在學校的科學展覽中，小華發現一位同學在展示過程中使用了一些不完全正確的 數據來美化實驗結果。小華知道這不是誠實的行為，但是他也想在比賽中獲勝，於是 選擇模仿這種做法，藉以提高自己的競爭力。」根據柯柏格道德發展階段論的觀點， 小華的想法屬於哪個階段？",
+      "options": [
+        "避罰服從取向（punishment and obedience orientation）",
+        "相對功利取向（instrumental purpose）",
+        "尋求認可取向（good boy good girl orientation）",
+        "社會契約取向（social contract）"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-035",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "在國文課程中，老師要求學生進行自我分析，並寫一篇日記來探討自己在面對困難 時的情感反應和行為模式。因此，學生需要反思自己的情緒管理方式和解決問題的 策略，並在課堂上分享他們的見解。請問這個學習活動對哪一種智力的發展影響較 大？",
+      "options": [
+        "內省智力（intrapersonal intelligence）",
+        "空間智力（spatial intelligence）",
+        "語文智力（linguistic intelligence）",
+        "邏輯-數學智力（logical-mathematical intelligence）"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-036",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "關於史坦伯格（Sternberg）的智力三元論，下列的描述何者正確？",
+      "options": [
+        "組合性智力指個體能統合不同觀念而形成頓悟或創造力的能力",
+        "經驗性智力指個體能運用學得的知識經驗以處理日常事務的能力",
+        "實用性智力指個體在問題情境中，能充分運用知識分析資料的能力",
+        "智力三元論擴大了傳統智力理論的觀念"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-037",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "關於社會學習理論的描述，何者為非？",
+      "options": [
+        "認為個體能夠通過觀察、模仿和模擬他人的行為來學習",
+        "強調獎勵和懲罰在行為學習過程中的重要性",
+        "主張學習僅能在社交互動過程中發生，獨自學習是不可能的",
+        "認知過程在理解和記憶觀察的行為扮演關鍵的角色"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-038",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "「琳琳小時候學會彈鋼琴、而且彈得很好；雖然她從國小畢業以後二十年都不再練 習，琳琳仍然有演奏鋼琴的能力。」請問這是屬於哪一種記憶？",
+      "options": [
+        "程序性記憶",
+        "陳述性記憶",
+        "情節性記憶",
+        "語意性記憶"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-039",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "「吳同學每次考試失敗之後，他覺得是因為……」請問依據韋納（B. Weiner）的歸因 理論，哪一種歸因維度的組合對動機的影響較好？",
+      "options": [
+        "內在、穩定、能控制",
+        "外在、不穩定、能控制",
+        "內在、穩定、不能控制",
+        "外在、不穩定、不能控制"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-040",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "在持久性的壓力下，個體在生理反應會出現一般適應症候群現象（general adaptation syndrome, GAS）。一般適應症候群的形成，不包括以下哪個階段？",
+      "options": [
+        "警覺階段",
+        "抗拒階段",
+        "否認階段",
+        "耗竭階段"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-041",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "新北國中九年級教師合作規劃學生參觀新北智慧產業園區，以瞭解產業結構及就業人員所需具備的技能與態度。此一規劃，較屬於課程設計的哪一種理論取向？",
+      "options": [
+        "社會適應取向",
+        "科技關懷取向",
+        "實徵分析取向",
+        "學生中心取向"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-042",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "新北國中數學教師以學校及社區的情境，共同設計數學學習步道，以引導學生學習 數學。此一作法，較符合課程選擇的哪一項規準？",
+      "options": [
+        "目標性",
+        "實用性",
+        "缺乏性",
+        "重要性"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-043",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "新北國中英文教師，邀請學區各所國小高年級英語教師來校，研討學生的英語學習 內容、學習成就及學習態度，以作為相互調整英文教材及學習方式的參酌。國小及國 中教師據此所修改的英語及英文課程，較符合課程組織的哪一項規準？",
+      "options": [
+        "聯結性",
+        "統整性",
+        "順序性",
+        "熟練性"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-044",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "卓老師發現學生在家庭聯絡簿所撰寫的內容及下課的聊天，提到社區大排水溝的異 味與顏色變化，因而在專題探究課程，引導學生分組，並由各組自行決定探究社區水 污染的主題。接著，鼓勵各組學生進行調查，分析污染源、污染情形、對居民的影響 及環境保護的相關法規。然後，安排各組學生根據分析的結果，共同討論並提出社區 水污染的改善建議，再分別發送給學校、居民及里長、造成污染的工廠、民意代表及 政府機關。卓老師的作法，最符合下列哪一種課程實施的觀點？",
+      "options": [
+        "重建觀",
+        "調適觀",
+        "締造觀",
+        "行動觀"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-045",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "新北國中教師在學生畢業前，蒐集並分析學生習得校訂關鍵能力的情形。此一作法， 較符合課程評鑑的哪一種類型？",
+      "options": [
+        "形成性評鑑",
+        "替代性評鑑",
+        "後設性評鑑",
+        "依據目標的評鑑"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-046",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "有關課程教育學者的主張或事蹟，下列配對何者正確？",
+      "options": [
+        "教師即研究者-泰勒（R. Tyler）",
+        "美國課程評鑑之父-古德萊德（J. Goodlad）",
+        "教師即行動研究者-艾利奧特（J. Elliott）",
+        "經驗課程-史登豪斯（L. Stenhouse）"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-047",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "謝老師對十二年國教 108 課綱「核心素養」的理解認知為「好奇、想像、創造、發 明、溝通表達、問題解決等」，這是屬於 J. Goodlad 的何種課程？",
+      "options": [
+        "理想課程",
+        "知覺課程",
+        "運作課程",
+        "經驗課程"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-048",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "白老師在編製課程時，考量學校與學生所處的城鄉差異，這是居於何種教育學理的 課程思維？",
+      "options": [
+        "教育心理學的認知發展",
+        "教育哲學的批判與思辨",
+        "教育行政學的經營管理",
+        "教育人類學的多元文化"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-049",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "根據課程學者泰勒（R. Tyler）的主張，下列何者並非課程目標選擇的主要來源？",
+      "options": [
+        "學習者",
+        "教師專業",
+        "學科知識",
+        "社會生活"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-050",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "許老師帶領學生至奇美博物館觀賞「從拉斐爾到梵谷」的展覽，以擴大學生美感視 野，這是屬於何種跨領域美感課程的類型？",
+      "options": [
+        "窗外式課程",
+        "混成式課程",
+        "議題式課程",
+        "學校本位課程"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-051",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "在課程發展史上，除了學者專家的課程外，也重視教師與學生的課程，這是屬於何種課程典範？",
+      "options": [
+        "技術典範",
+        "實用典範",
+        "多元典範",
+        "網絡典範"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-052",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "就十二年國教 108 課綱 19 項議題的內容重點而言，下列哪一項跟三面九項中的「C3 多元文化與國際理解」較無直接關聯？",
+      "options": [
+        "原住民族教育",
+        "多元文化教育",
+        "性別平等教育",
+        "生涯規劃教育"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-053",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "依據 R. Hollins 所述，描述性課程領域與表達性課程領域交集處得以產生核心能力， 但不包括下列何者？",
+      "options": [
+        "冥想",
+        "創造",
+        "批判思考",
+        "問題解決"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-054",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "康老師讓學生帶著 iPad 平板電腦，走到學校附近的溪畔，記錄周遭植物、昆蟲、鳥 類等生態環境，並剪輯一段環境教育的影片，這較屬於何種課程類型？",
+      "options": [
+        "螺旋式課程",
+        "混成式課程",
+        "議題式課程",
+        "學科式課程"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-055",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "課程教學隨著網絡社會與 AI 生成快速發展，也需加以應變，下列何種課程組織結構 較能符應此需求？",
+      "options": [
+        "學科本位課程結構（subject-based curricular structure）",
+        "格子狀的課程結構（lattice-like curricular structure）",
+        "螺旋式的課程結構（spiral curricular structure）",
+        "中心化的課程結構（centralized curricular structure）"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-056",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "臺灣以2014年為美感教育元年，迄今已滿十年，關於課程實踐的敘述下列何者為非？",
+      "options": [
+        "透過五感六覺對現象世界美的認知、感受與情感表達",
+        "重視既在地又國際、既國際又在地的美感課程",
+        "強化臺灣與國際的美感鏈結",
+        "側重學生美感智能的紙筆測驗成績"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-057",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "傳統技術典範的課程發展為課程創製奠定基礎，下列關於目標模式課程組成的描述 何者有誤？",
+      "options": [
+        "擬定課程目標",
+        "組織課程內容",
+        "安排課程活動",
+        "循環課程評鑑"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-058",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "蔡元培先生融合中西文化的教育思想，因為他把世界分為現象的世界和實體的世界， 因此有下列哪兩種教育的區分？",
+      "options": [
+        "隸屬於公民道德的教育與超軼乎公民道德的教育",
+        "隸屬於美感的教育與超軼乎美感的教育",
+        "隸屬於政治的教育與超軼乎政治的教育",
+        "隸屬於世界觀的教育與超軼乎世界觀的教育"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-059",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "在下列教育思想中，何者提出並特別強調「教育關係（pedagogical relation）」的重要 性，主張在這種關係的發展下，兒童或年輕人在逐漸成長之下不再需要與他人建立 這種關係，教育關係因而解消？",
+      "options": [
+        "實驗主義教育學（Experimentalism）",
+        "分析的教育哲學（Analytical philosophy of education）",
+        "精神科學教育學（Geisteswissenschaftliche Pädagogik）",
+        "批判教育學（Critical pedagogy）"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-060",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "蒙特梭利（M. Montessori）是一名醫師和教育家，下列何者不是她的主張？",
+      "options": [
+        "給予兒童不受干擾而能正常發展的環境",
+        "要提供兒童恩物（Gifts）",
+        "兒童應有從事學習的完全自由",
+        "提倡每位孩子都有自發性的學習潛力與吸收性心智（absorbent mind）"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-061",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "全人教育學者納瓦（R. G. Nava）主張全人教育的四個面向或領域，這四者之中，何者同時是四個面向或領域之一，也是這四個面向或領域的基礎？",
+      "options": [
+        "靈性",
+        "社會",
+        "科學",
+        "生態"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-062",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "行為主義者史金納（B. F. Skinner）倡導「編序教學」（programmed instruction），其立 基的哲學基礎為下列何者？",
+      "options": [
+        "實證主義（Positivism）",
+        "浪漫主義（Romanticism）",
+        "現象學（Phenomenology)）",
+        "結構主義（Structuralism）"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-063",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "下列何者曾經批評傳統的品格教育，指出這些品格教育途徑，相信人類的道德品格 是由「德行袋」（bag of virtues）所組成的，諸如誠實、仁慈、耐心等?",
+      "options": [
+        "瑞斯（L. E. Raths）",
+        "吉莉根（Carol Gilligan）",
+        "諾丁斯（N. Noddings）",
+        "柯爾伯格（L. Kohlberg）"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-064",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "一般相信，赫爾巴特（J. F. Herbart）以人類心靈接觸外物時會形成種種表象，集種種 表象而成類化團（Apperception mass），因此強調教材排列和提示的系統教學法，以 使新舊表象相類化，這屬於下列何種心靈學說?",
+      "options": [
+        "心靈實體說",
+        "心理狀態說",
+        "唯物主義心靈論",
+        "試（實）驗主義心靈論"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-065",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "下列何者通常與「自我應驗預言」（self-fulfilling prophecy）互用，是指教師期望對學 生學業成績和智商發展所產生的影響？",
+      "options": [
+        "空無課程（Null Curriculum）",
+        "畢馬龍效應（Pygmalion Effect）",
+        "序位效應（Serial Position Effect）",
+        "性向處理交互作用（ATI）"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-066",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "在臺灣文教發展史中，下列重要組織（或報紙）與重要人物的連結，何者是正確的？",
+      "options": [
+        "「臺灣公論報」─李萬居",
+        "「臺陽美術協會」─林茂生",
+        "「臺灣文化協會」─吳火獅",
+        "「臺灣同化會」─陳儀"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-067",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "對於「階級制度、分工與知識分類等都由學校加以保留，並持續傳遞下去」這個說 法，是下列何種思潮的何種概念？",
+      "options": [
+        "結構主義中認知結構「保留」（Conservation）的概念",
+        "馬克思主義中「再製」（Reproduction）的概念",
+        "馬克思主義中「宰制」（Domination）的概念",
+        "保守主義中「文化保留」（Cultural Conservation）的概念"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-068",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "有理論主張資訊模式（informational pattern）才是存在的根本，各種數位工具或穿載 裝置的普遍使用，它們將會成為人身體的一部分，也使得人類身體有如「原始義肢」 （original prosthesis），它將隨時可被其他「義肢」所取代。請問這種理論即為？",
+      "options": [
+        "後人類主義",
+        "後現代主義",
+        "新實用主義",
+        "新理性主義"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-069",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "「世界一家」之觀點源自雅典，也是斯多噶主義（Stoicism）的核心觀點之一，期待 每一個人能夠享有愉悅（happy）與幸福（happiness）人生，主張人所做的一切都是 為了幸福，而得享幸福與否的關鍵則在於「順從自然」（following nature）。請問「世 界一家」的理想與十二年國民基本教育哪一項核心素養面向較為密切相關？",
+      "options": [
+        "自主行動",
+        "系統思考",
+        "溝通互動",
+        "社會參與"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-070",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "有學者主張教育問題的思考應將批判和創造結合起來，並從「理論和實踐」、「正確和 錯誤」的二元對立模式中跳脫出來，找出其間的可能矛盾與後果，進而開展新可能。 請問這樣的思考較接近下列何者？",
+      "options": [
+        "新康德主義",
+        "新實用主義",
+        "後結構主義",
+        "後文化主義"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-071",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "任何一個道德行為有可能當事人無法完全控制的，且可能讓道德行為無法完成，此即「道德運氣」（moral luck）。請問下列哪種狀況較貼近「道德運氣」的意涵？",
+      "options": [
+        "默默熱心助人而獲得師長肯定的同學",
+        "縱使說話不討喜仍能誠實以告的同學",
+        "相信日行一善將來能有好福報的同學",
+        "勤勉卻因個人稟賦沒能好表現的同學"
+      ],
+      "answer": 3,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-072",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "李老師相信師生之間的關懷關係才是有意義學習的基礎，更以此來經營自己的班級。 請問下列哪一項較不會是李老師會採取的優先作為？",
+      "options": [
+        "開展理性思辦與對話之能力",
+        "以身作則提供孩子道德楷模",
+        "營造分享與支持的教室氛圍",
+        "引導學生能夠看見同學優點"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-073",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "面對人工智能（artificial intelligence）的深度學習與對話能力，雖然會使得「人與物」 與「人與人」的區分日益困難，卻也開啟一種極具開創性的對話教育（dialogic education），即透過新的對話空間來擴展「自我」（self）與「我們」（us）的新意義， 也就是以技術（機器人）為媒介的對話，這會是過去人類生命與存在意義中不曾有過 的。請問此種思考較會是何種哲學立場的進一步擴展？",
+      "options": [
+        "弗雷勒(P. Freire)的《受壓者教育學》（Pedagogy of the oppressed）",
+        "馬丁．布伯(M. Burber)的《吾與汝》（I and Thou）",
+        "杜威(J. Dewey)的《思維術》（How we think）",
+        "李歐塔(F. Lyotard)的《後現代狀況》（The postmodern condition）"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-074",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "某學校規劃以亞里斯多德思想做為品格教育推動之理論基礎，期待能培養兒童能有 好品格。請問下列哪一個描述能夠符合亞里斯多德對於「道德德行」（moral virtue） 之主張？",
+      "options": [
+        "良好品格的獲得必須依靠啟發與引導",
+        "應建立明確檢核標準以引導學生行為",
+        "行為恰當與否是一種幾何比例的判斷",
+        "道德行為必須排除或壓制情緒的影響"
+      ],
+      "answer": 2,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-075",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "「蘇格拉底教學法」（Socratic Method）強調教師透過對話或辯論過程，也就是在「提問-回答-追問-修正-再追問-再修正……」的對話歷程，引導學生澄清事理或掌握事件本質的一種方法。請問下列有關「蘇格拉底教育學法」的說明何者正確？",
+      "options": [
+        "即為討論辯證的思考探究",
+        "即為經驗歸納方法的應用",
+        "目的在於有效地解決問題",
+        "導向化解矛盾與尋求共識"
+      ],
+      "answer": 0,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    },
+    {
+      "id": "HIST-120111-076",
+      "year": "113",
+      "exam": "113新北市國中教甄（教育專業科）",
+      "category": "原始題庫待分類",
+      "topic": "待補深度詳解",
+      "stem": "「問題本位學習」（Problem-Based Learning）即以引導學習者先找出待解決問題，進 而分析問題的各種狀況或條件，再判斷可以何種行動或假設來解決該問題，接著再 針對假設進行驗證。若依杜威（John Dewey）反省思考的階段分析，「分析問題的各 種狀況或條件」意即：",
+      "options": [
+        "提示（suggestion）",
+        "理智化（intellectualization）",
+        "推理（reasoning）",
+        "驗證（testing the hypothesis）"
+      ],
+      "answer": 1,
+      "explanation": "",
+      "optionExplanations": [],
+      "keyPoint": "",
+      "trap": ""
+    }
+  ]
+}
